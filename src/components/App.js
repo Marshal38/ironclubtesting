@@ -18,7 +18,6 @@ const initialState = {
   index: 0,
   answer: null,
   points: 0,
-  highscore: 0,
   secondsRemaining: null,
 };
 
@@ -66,8 +65,6 @@ function reducer(state, action) {
       return {
         ...state,
         status: "Finished",
-        highscore:
-          state.points > state.highscore ? state.points : state.highscore,
       };
 
     case "Timer":
@@ -84,7 +81,7 @@ function reducer(state, action) {
 
 export default function App() {
   const [
-    { questions, status, index, answer, points, highscore, secondsRemaining },
+    { questions, status, index, answer, points, secondsRemaining },
     dispatch,
   ] = useReducer(reducer, initialState);
 
