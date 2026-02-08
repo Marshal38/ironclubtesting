@@ -37,7 +37,7 @@ body {
 }
 
 .main {
-  width: 50rem;
+  width: 100%;
 }
 
 .app-header {
@@ -104,6 +104,7 @@ h4 {
 }
 
 progress {
+  appearance: none;
   -webkit-appearance: none;
   width: 100%;
   height: 12px;
@@ -191,12 +192,6 @@ progress {
   margin-right: 4px;
 }
 
-.highscore {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 4.8rem;
-}
-
 .loader-container {
   display: flex;
   flex-direction: column;
@@ -232,11 +227,20 @@ progress {
 
 .emoji {
   display: flex;
-
   justify-content: center;
   align-items: center;
   height: 35vh;
   font-size: 130px;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.count p {
+  margin-left: auto;
 }
 
 @keyframes loader {
@@ -266,7 +270,99 @@ progress {
   margin: 6rem;
 }
 
-.counter * {
-  font-size: inherit;
-  padding: 0.8rem;
+/* mobile */
+
+@media (max-width: 748px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-header {
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 30%;
+  }
+
+  h1 {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+
+  progress {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 12px;
+    grid-column: 1 / -1;
+    align-self: center;
+  }
+
+  .count {
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: space-between;
+    gap: 71px;
+  }
+
+  .btn-option {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .timer {
+    font-size: 1.5rem;
+  }
+
+  .btn-ui {
+    font-size: 1.5rem;
+  }
+
+  .result {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+    padding: 1rem;
+  }
+
+  .emoji {
+    font-size: 90px;
+  }
 }
