@@ -235,12 +235,8 @@ progress {
 
 .count {
   display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.count p {
-  margin-left: auto;
+  justify-content: space-between;
+  width: 95vw;
 }
 
 @keyframes loader {
@@ -337,9 +333,7 @@ progress {
 
   .count {
     font-size: 1.5rem;
-    text-align: center;
-    justify-content: space-between;
-    gap: 71px;
+    width: 80vw;
   }
 
   .btn-option {
