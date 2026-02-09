@@ -269,6 +269,10 @@ progress {
 /* mobile */
 
 @media (max-width: 748px) {
+  body {
+    min-height: 90vh;
+  }
+
   .app {
     display: flex;
     flex-direction: column;
@@ -292,7 +296,7 @@ progress {
   }
 
   img {
-    width: 30%;
+    width: 20%;
   }
 
   h1 {
