@@ -293,10 +293,11 @@ progress {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
   }
 
   img {
-    width: 20%;
+    width: 15%;
   }
 
   h1 {
